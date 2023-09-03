@@ -9,21 +9,16 @@ def main():
     macaroon = codecs.encode(open(MACAROON_PATH, "rb").read(), "hex")
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
-    # ASSET_META_DATA = {
-    #     "data": "Lot's of cool meta data",
-    #     "type": "some type",
-    #     "meta_hash": "hash",
-    # }
-
     ASSET_DATA = {
         "asset_type": "NORMAL",
         "name": "Alice Coin",
-        "amount": 100000,
+        "amount": 200000,
+        # "group_key": "Group key here",
     }
 
     data = {
         "asset": ASSET_DATA,
-        "enable_emission": True,
+        # "enable_emission" : True,
     }
 
     response = requests.post(

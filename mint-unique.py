@@ -18,7 +18,7 @@ def main():
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
     # Convert image to hex
-    image_hex = image_to_hex("/path/to/key.png")
+    image_hex = image_to_hex("/home/hannah/Temp/Tapd-Python/key.png")
 
     ASSET_META_DATA = {
         "data": image_hex,
@@ -27,14 +27,14 @@ def main():
 
     ASSET_DATA = {
         "asset_type": "COLLECTIBLE",
-        "name": "asset name",
+        "name": "Bob's Key",
         "asset_meta": ASSET_META_DATA,
         "amount": 1,
     }
 
     data = {
         "asset": ASSET_DATA,
-        "enable_emission": True,
+        "enable_emission": False,
     }
 
     response = requests.post(
