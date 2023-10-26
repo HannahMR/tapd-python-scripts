@@ -9,7 +9,7 @@ def main():
     macaroon = codecs.encode(open(MACAROON_PATH, "rb").read(), "hex")
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
-    data = {"tap_addrs": ["big long address here!"]}
+    data = {"tap_addrs": ["taprt..."]}
 
     response = requests.post(
         url, headers=headers, data=json.dumps(data), verify=TLS_PATH

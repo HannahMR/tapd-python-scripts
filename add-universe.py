@@ -7,7 +7,7 @@ def main():
     macaroon = codecs.encode(open(MACAROON_PATH, "rb").read(), "hex")
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
-    universe = {"host": "127.0.0.1:12029"}
+    universe = {"host": "IP or URL + port"}
 
     data = {"servers": [universe]}
 

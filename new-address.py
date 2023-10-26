@@ -1,5 +1,4 @@
 import requests
-import base64
 import json
 import codecs
 from settings import REST_HOST, MACAROON_PATH, TLS_PATH
@@ -11,8 +10,8 @@ def main():
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
     data = {
-        "asset_id": "id string here",
-        "amt": 1000,
+        "asset_id": "asset-id",
+        "amt": 100,
         "tapscript_sibling": "",
     }
 

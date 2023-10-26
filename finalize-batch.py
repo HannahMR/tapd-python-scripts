@@ -1,5 +1,4 @@
 import requests
-import base64
 import json
 import codecs
 from settings import REST_HOST, MACAROON_PATH, TLS_PATH

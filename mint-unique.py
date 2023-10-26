@@ -18,6 +18,7 @@ def main():
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
     # Convert image to hex
+    # There are many, possibley better, ways to add meta data
     image_hex = image_to_hex("/home/hannah/Temp/Tapd-Python/key.png")
 
     ASSET_META_DATA = {
@@ -27,7 +28,7 @@ def main():
 
     ASSET_DATA = {
         "asset_type": "COLLECTIBLE",
-        "name": "Bob's Key",
+        "name": "Alice's Key",
         "asset_meta": ASSET_META_DATA,
         "amount": 1,
     }

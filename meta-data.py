@@ -1,12 +1,11 @@
 import requests
-import json
 import codecs
 from urllib.parse import quote
 from settings import REST_HOST, MACAROON_PATH, TLS_PATH
 
 
 def main():
-    asset_id = "f89114c2cddd40a15a318d7d5b0e7b518f6e8771ec895beac0b59c9fdaae5a1f"
+    asset_id = "asset-id"
     encoded_asset_id = quote(asset_id)
 
     url = (
