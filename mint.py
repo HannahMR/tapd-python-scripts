@@ -11,14 +11,15 @@ def main():
 
     ASSET_DATA = {
         "asset_type": "NORMAL",
-        "name": "Alice Coin",
-        "amount": 100000,
-        # "group_key": "group key",
+        "name": "Asset name",
+        "amount": <uint64>,
+        # "new_grouped_asset": True,
+        # "grouped_asset": True,
+        # "group_key": "Tweaked group key here",
     }
 
     data = {
         "asset": ASSET_DATA,
-        # "enable_emission": True,
     }
 
     response = requests.post(
