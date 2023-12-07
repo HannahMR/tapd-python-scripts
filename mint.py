@@ -9,10 +9,16 @@ def main():
     macaroon = codecs.encode(open(MACAROON_PATH, "rb").read(), "hex")
     headers = {"Grpc-Metadata-macaroon": macaroon}
 
+    # There are many ways and types of metadata to add. This is a simple example.
+    # ASSET_META = {
+    #     "data": "Your data here as hex",
+    # }
+
     ASSET_DATA = {
         "asset_type": "NORMAL",
-        "name": "Asset name",
+         "name": "Asset name",
         "amount": <uint64>,
+        # "asset_meta": ASSET_META,
         # "new_grouped_asset": True,
         # "grouped_asset": True,
         # "group_key": "Tweaked group key here",
